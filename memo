@@ -1,0 +1,21 @@
+正则表达式：re(regular expression)
+
+m = re.search('[0-9]', 'lkj2lkjsdf')
+# 在第二个参数中的字符串里面寻找“0~9”的数字
+
+str = re.sub(pattern, replacement, string) 
+# 在string中利用正则变换pattern进行搜索，对于搜索到的字符串，用另一字符串replacement替换。返回替换后的字符串。
+
+re.split()   
+# 根据正则表达式分割字符串， 将分割后的所有子字符串放在一个表(list)中返回
+
+re.findall()  
+# 根据正则表达式搜索字符串，将所有符合的子字符串放在一给表(list)中返回
+
+re.compile(pattern[, flags])
+# 把正则表达式的模式和标识转化成正则表达式对象，供 match() 和 search() 这两个函数使用。
+
+##############################################################################
+import sys
+sys可以让你使用命令行参数
+sys.argv[];
