@@ -28,8 +28,22 @@ def countWords():
     numlist.sort(key = lambda  t:t[0])
 
     # output
-    for i in numlist:
-        print(i[0], i[1])
+    # find target ssd in logfile
+    count = 0;
+    limit = len(sys.argv) - 2
+    for i in range(2, len(sys.argv)):
+        for j in numlist:
+            if j[0] == sys.argv[i]:
+              print "I got %10s %10s times " % (j[0], j[1])
+              count +=1;
+              break
+
+    if count != limit:
+       print "test fail..."
+
+
+            
+
 
 if __name__ == '__main__':
     countWords()
